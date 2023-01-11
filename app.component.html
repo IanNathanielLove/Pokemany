@@ -1,0 +1,23 @@
+
+<style>  
+  .pulse:hover,
+  .pulse:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+  }
+
+@keyframes pulse {
+  0%, 10% { box-shadow: 0 0 0 0; }
+}
+
+</style>
+
+<div class="container" >
+  <h1>{{title}}</h1>
+<nav>
+  <button class="pulse" routerLink="/dashboard">Dashboard</button>
+  <button class="pulse" routerLink="/heroes">Heroes</button>
+</nav>
+</div>
+<router-outlet></router-outlet>
+<app-messages></app-messages>
